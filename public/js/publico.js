@@ -14,8 +14,12 @@ const socket = io();
 
 socket.on( 'ultimos4', ( payload ) => {
 
-    console.log(payload);
+    //Audio effect
+    const audio = new Audio('../audio/new-ticket.mp3')
+    audio.play();
+
     const [ ticket1, ticket2, ticket3, ticket4 ] = payload;
+
     if ( ticket1 ) {
         lblTicket1.innerText        = 'Ticket ' +ticket1.numero;
         lblEscritorio1.innerText    = ticket1.escritorio;

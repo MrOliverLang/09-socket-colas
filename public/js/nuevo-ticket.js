@@ -8,10 +8,6 @@ const socket = io();
 socket.on('connect', () => {
     btnCrear.disabled = false;
 
-    socket.on( 'ultimo-ticket', (Ultimoticket) => {
-
-        lblNuevoTicket.innerText = `Ticket ${Ultimoticket}`;
-    })
 });
 
 socket.on('disconnect', () => {
@@ -19,6 +15,10 @@ socket.on('disconnect', () => {
 });
 
 
+socket.on( 'ultimo-ticket', (Ultimoticket) => {
+
+    lblNuevoTicket.innerText = `Ticket ${Ultimoticket}`;
+})
 
 btnCrear.addEventListener( 'click', () => {
 

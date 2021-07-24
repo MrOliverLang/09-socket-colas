@@ -56,8 +56,4 @@ btnAtender.addEventListener( 'click', () => {
 
         lblTicket.innerText = 'Ticket ' + ticket.numero;
     });
-    // socket.emit( 'siguiente-ticket', null, ( ticket ) => {
-    //     lblNuevoTicket.innerText = ticket;
-    // });
-
 });
